@@ -1,10 +1,12 @@
 'use strict';
 
+require('dotenv').config()
+
 const express = require('express');
 const app = express();
 
 app.get('/',  (req, res) =>  {
-    res.send('Hello World');
+    res.send('Hello World from Kazuki');
   });
 
 
@@ -13,4 +15,4 @@ app.get('/test',  (req, res) =>  {
   });
 
 
-app.listen(3000);
+app.listen(process.env.PORT);
